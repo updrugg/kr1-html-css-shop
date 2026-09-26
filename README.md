@@ -30,3 +30,6 @@
 
 Создана базовая структура проекта.
 
+## Ссылка на опубликованный проект
+
+GitHubPages: https://updrugg.github.io/kr1-html-css-shop/
