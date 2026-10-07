@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мирт Комнатный Вариегатный — Магазин Leafy corner</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="site-header">
+    <a href="../index.html" class="site-logo" aria-label="Leafy corner — на главную">
+      <img src="../images/logo.png" alt="Leafy corner">
+      Leafy corner
+    </a>
+    <nav class="site-nav">
+      <ul class="site-nav__list">
+        <li><a href="../index.html">Главная</a></li>
+        <li><a href="../catalog.html">Каталог</a></li>
+        <li><a href="../contacts.html">Контакты</a></li>
+        <li><a href="../index.html#reviews">Отзывы</a></li>
+      </ul>
+    </nav>
+    </div>
+  </header>
+
+  <nav class="breadcrumbs" aria-label="Хлебные крошки">
+    <a href="../index.html">Главная</a>
+    <a href="../catalog.html">Каталог</a>
+    <span>Мирт Комнатный Вариегатный</span>
+  </nav>
+
+  <main class="product-page">
+    <div class="product-layout">
+      <div class="product-gallery">
+        <img class="product-gallery__main"
+             src="../images/myrt.webp"
+             alt="Мирт Комнатный Вариегатный — общий вид">
+        <div class="product-gallery__thumbs">
+          <img src="../images/myrt-1.webp" alt="Мирт — вид 1">
+          <img src="../images/myrt-2.webp" alt="Мирт — листья крупным планом">
+          <img src="../images/myrt-3.webp" alt="Мирт — в интерьере">
+        </div>
+      </div>
+
+      <div class="product-info">
+        <h1>Мирт Комнатный Вариегатный</h1>
+        <p class="product-info__price">1200 руб.</p>
+
+        <div class="product-info__description">
+          <h3>Описание</h3>
+          <p>Вечнозелёный кустарник с мелкими ароматными листьями, украшенными бело-кремовой каймой. При растирании листья источают свежий хвойно-цитрусовый аромат. Отличный выбор для тех, кто ценит необычные растения с характером.</p>
+          <p>Мирт неприхотлив, легко формируется в штамб или куст, подойдёт для выращивания в домашних условиях и на балконе в тёплое время года.</p>
+        </div>
+
+        <ul class="product-info__specs">
+          <li><strong>Освещение</strong> <span>Яркий рассеянный свет</span></li>
+          <li><strong>Полив</strong> <span>Регулярный, без пересушки</span></li>
+          <li><strong>Влажность</strong> <span>Высокая, любит опрыскивание</span></li>
+          <li><strong>Высота</strong> <span>~35 см</span></li>
+        </ul>
+
+        <button class="button"
+                type="button"
+                data-open-order
+                data-product="Мирт Комнатный Вариегатный">
+          Заказать
+        </button>
+
+        <a href="../catalog.html" class="back-link">← Вернуться в каталог</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer id="contacts">
+  <p>&copy; 2026 Учебный проект. Все права защищены.</p>
+  <p>Дисциплина: Фронтенд и бэкенд разработка</p>
+  </footer>
+
+  <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
+    <h2 id="order-dialog-title">Оформление заявки</h2>
+
+    <form class="order-form" id="order-form" action="#" method="post" novalidate>
+      <input id="selected-product" name="selected-product" type="hidden">
+
+      <div class="form-field">
+        <label for="order-name">Имя</label>
+        <input id="order-name" name="name" type="text" placeholder="Введите ваше имя"
+               minlength="2" autocomplete="given-name" required>
+      </div>
+
+      <div class="form-field">
+        <label for="order-email">E-mail</label>
+        <input id="order-email" name="email" type="email"
+               placeholder="example@mail.ru" autocomplete="email" required>
+      </div>
+
+      <div class="form-field">
+        <label for="order-phone">Телефон</label>
+        <input id="order-phone" name="phone" type="tel" inputmode="tel"
+               placeholder="+7 (900) 000-00-00"
+               pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" required>
+        <small>Формат: +7 (900) 000-00-00</small>
+      </div>
+
+      <div class="form-field">
+        <label for="order-date">Дата оформления</label>
+        <input id="order-date" name="date" type="date">
+      </div>
+
+      <div class="form-field">
+        <label for="order-topic">Тема заявки</label>
+        <select id="order-topic" name="topic" required>
+          <option value="">Выберите тему</option>
+          <option value="product">Заказ товара</option>
+          <option value="consultation">Консультация</option>
+          <option value="delivery">Доставка</option>
+        </select>
+      </div>
+
+      <div class="form-field">
+        <label for="order-comment">Комментарий</label>
+        <textarea id="order-comment" name="comment" rows="4"
+                  placeholder="Укажите пожелания"></textarea>
+      </div>
+
+      <div class="form-field form-field--checkbox">
+        <label>
+          <input id="order-agreement" name="agreement" type="checkbox" required>
+          Я согласен на обработку данных
+        </label>
+      </div>
+
+      <div class="form-actions">
+        <button type="button" id="close-order-dialog">Закрыть</button>
+        <button type="submit">Отправить заявку</button>
+      </div>
+    </form>
+  </dialog>
+
+  <p class="success-message" id="success-message" hidden>Форма успешно отправлена!</p>
+
+  <script src="../js/main.js"></script>
+
+</body>
+</html>
