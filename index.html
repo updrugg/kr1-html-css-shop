@@ -7,6 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Основная страница Leafy corner</title>
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
@@ -30,14 +31,24 @@
 
 <main>
 <section class="hero">
-<h1>Магазин экзотических растений</h1>
-<p>
+  <div>
+    <h1 class = 'hero-title'>Магазин экзотических растений</h1>
+    <p>
     Откройте для себя удивительный мир экзотической флоры. 
     В нашем магазине вы найдете редкие виды растений, которые привнесут в ваш дом яркие краски и уникальную атмосферу. 
-    Мы гарантируем высокое качество каждого саженца и бережную упаковку. 
-    Быстрая доставка по всей стране позволит вам наслаждаться красотой тропиков, не выходя из дома. 
-</p>
-<a class="button" href="#popular">Перейти к товарам</a>
+    </p>
+    <a class="button" href="#popular">Перейти к товарам</a>
+  </div>
+
+  <picture>
+    <source srcset="images/im.jpg">
+<img
+  src="images/im.webp"
+  alt="Экзотические растения"
+  max-height: 400px
+  class = 'hero-img'
+>
+</picture>
 </section>
 
 <section class="section" id="advantages">
@@ -71,11 +82,28 @@
   </article>
 
   <article class="product-card">
-    <img src="images/monstera.webp" alt="Монстера Деликатесная">
+    <img src="images/monstera.jpg"
+        srcset="images/monstera-400.jpg 480w,
+        images/monstera.jpg 640w,
+        images/monstera-750.jpg 960w"
+        sizes="(max-width: 639px) 100vw,
+        (max-width: 1023px) 50vw,
+        33vw"
+        alt="Монстера деликатесная"
+        loading="lazy"/>
+
     <h3>Монстера Деликатесная</h3>
     <p>Крупные резные листья, эффектный вид.</p>
     <p>Цена: 2500 руб.</p>
     <a class="button" href="goods/monstera.html">Подробнее</a>
+  </article>
+
+  <article class="product-card">
+    <img src="images/myrt.webp" alt="Мирт комнатный вариегатный">
+    <h3>Мирт Вариегатный</h3>
+    <p>Ароматные пёстрые листья, легко формируется в куст.</p>
+    <p>Цена: 1200 руб.</p>
+    <a class="button" href="goods/myrt.html">Подробнее</a>
   </article>
 </div>
 </section>

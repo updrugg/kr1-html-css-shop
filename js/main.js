@@ -72,3 +72,14 @@ orderForm.reset();
   // Закрываем модальное окно.
 orderDialog.close();
 });
+
+const mainImage = document.getElementById('mainImage');
+if (mainImage){
+  const thumbs = document.querySelectorAll('.product-gallery__thumbs img');
+
+  thumbs.forEach(thumb =>{
+    thumb.addEventListener('click', () =>{
+      mainImage.src = thumb.dataset.src;
+    });
+  });
+}
